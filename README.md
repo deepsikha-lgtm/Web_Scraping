@@ -74,10 +74,15 @@ Successfully scraped data for 250 countries
 
 First 5 countries:
         Country                 Capital                 Population      Area
+        
 0       Andorra                 Andorra la Vella        84000           468.0
+
 1       United Arab Emirates    Abu Dhabi               4975593         82880.0
+
 2       Afghanistan             Kabul                   29121286        647500.0
+
 3       Antigua and Barbuda     St. John's              86754           443.0
+
 4       Albania                 Tirana                  2986952         28748.0
 
 Data successfully saved to:
