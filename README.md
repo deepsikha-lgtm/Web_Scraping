@@ -73,7 +73,6 @@ Scraping country data...
 Successfully scraped data for 250 countries
 
 First 5 countries:
-
         Country                 Capital                 Population      Area
 0       Andorra                 Andorra la Vella        84000           468.0
 1       United Arab Emirates    Abu Dhabi               4975593         82880.0
@@ -140,6 +139,7 @@ Returns:
 Tuple: (country_name, capital_name, population, area)
 
 get_soup(url)
+
 Fetches and parses webpage content.
 
 Parameters:
@@ -177,7 +177,7 @@ Fork the repository
 
 Create a feature branch
 
-``
+```
 git checkout -b feature/your-feature-name
 ```
 
