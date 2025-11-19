@@ -8,302 +8,265 @@
 
 [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
-A powerful and efficient web scraper that extracts comprehensive country data from [Scrapethissite.com](https://www.scrapethissite.com/pages/simple/) and exports it to multiple formats. Perfect for learning web scraping, data processing, and automation.
+A powerful and efficient web scraper that extracts comprehensive country data from **Scrapethissite.com** and exports it to multiple formats.
+Perfect for learning **web scraping**, **data analysis**, and **automation**.
+
+---
 
 ## ✨ Features
 
-- 🔍 **Web Scraping**: Extract country data using BeautifulSoup4
+* 🔍 **Web Scraping** using BeautifulSoup4
+* 
+* 📊 **Data Processing** with pandas
+* 
+* 💾 **Multi-format Export**: Excel (.xlsx) and CSV
+* 
+* 📈 **Basic Analytics** included
+* 
+* 🛡️ **Robust Error Handling** and logging
+* 
+* ⚡ **Fast & Efficient** scraping loop
 
-- 📊 **Data Processing**: Clean and transform data with pandas
-
-- 💾 **Multiple Formats**: Export to Excel (.xlsx) and CSV
-
-- 📈 **Data Analytics**: Generate insightful statistics
-
-- 🛡️ **Error Handling**: Robust error handling and logging
-
-- ⚡ **Fast & Efficient**: Optimized scraping operations
+---
 
 ## 📦 Quick Start
 
-### Prerequisites
+### ✔️ Prerequisites
 
-- Python 3.7 or higher
-- pip package manager
+* Python **3.7+**
+* `pip` package manager
 
-### Installation
+### 🔧 Installation
 
-1. **Clone the repository**
+**1. Clone the repository**
 
-```
+```bash
 git clone https://github.com/yourusername/country-data-scraper.git
 cd country-data-scraper
 ```
 
-Set up virtual environment
+**2. Set up a virtual environment**
 
-```
+```bash
 python -m venv venv
-source venv/bin/activate  # Linux/Mac
+source venv/bin/activate      # Linux/Mac
 # OR
-venv\Scripts\activate     # Windows
+venv\Scripts\activate         # Windows
 ```
 
-Install dependencies
+**3. Install dependencies**
 
-```
+```bash
 pip install -r requirements.txt
+```
 
-Run the Scraper
+---
 
+## 🚀 Usage
+
+### Run the scraper
+
+```bash
 python country_scraper.py
 ```
 
-🚀 Usage
+### Sample Output
 
-Basic Usage
-
-Run the main script to scrape all country data:
-
-python country_scraper.py
-
-Expected Output
-
+```
 Scraping country data...
-Successfully scraped data for 250 countries
+Successfully scraped data for 250 countries.
 
 First 5 countries:
-        Country                 Capital                 Population      Area
-        
-0       Andorra                 Andorra la Vella        84000           468.0
-
-1       United Arab Emirates    Abu Dhabi               4975593         82880.0
-
-2       Afghanistan             Kabul                   29121286        647500.0
-
-3       Antigua and Barbuda     St. John's              86754           443.0
-
-4       Albania                 Tirana                  2986952         28748.0
+        Country                 Capital              Population      Area
+0       Andorra                 Andorra la Vella     84000           468.0
+1       United Arab Emirates    Abu Dhabi            4975593         82880.0
+2       Afghanistan             Kabul                29121286        647500.0
+3       Antigua and Barbuda     St. John's           86754           443.0
+4       Albania                 Tirana               2986952         28748.0
 
 Data successfully saved to:
-
-- countries_data.xlsx (Excel format)
-- countries_data.csv (CSV format)
+- countries_data.xlsx
+- countries_data.csv
 
 Basic Statistics:
-
 Total countries: 250
-
 Most populated country: China (1,330,044,544)
-
 Largest country by area: Russia (17,098,242.0 km²)
+```
 
-📁 Project Structure
+---
 
+## 📁 Project Structure
+
+```
 country-data-scraper/
 │
 ├── country_scraper.py          # Main scraping script
 ├── requirements.txt            # Project dependencies
-├── countries_data.xlsx         # Generated Excel file
-├── countries_data.csv          # Generated CSV file
+├── countries_data.xlsx         # Exported Excel file
+├── countries_data.csv          # Exported CSV file
 ├── LICENSE                     # MIT License
 └── README.md                   # Project documentation
-
-🔧 Technical Details
-
-Dependencies
-
-Package	Version	Purpose
-
-beautifulsoup4	≥4.9.0	HTML parsing and data extraction
-requests	≥2.25.0	HTTP requests
-pandas	≥1.3.0	Data manipulation and export
-openpyxl	≥3.0.0	Excel file handling
-
-Data Schema
-
-The scraper extracts the following fields for each country:
-
-Field	        Type	Description
-Country	        String	Name of the country
-Capital	        String	Capital city name
-Population	Integer	Total population count
-Area	        Float	Land area in square kilometers
-
-API Reference
-
-get_details(country_one)
-Extracts data from a single country HTML element.
-
-Parameters:
-
-country_one (BeautifulSoup element): HTML element containing country data
-
-Returns:
-
-Tuple: (country_name, capital_name, population, area)
-
-get_soup(url)
-
-Fetches and parses webpage content.
-
-Parameters:
-
-url (str): Target URL to scrape
-
-Returns:
-
-BeautifulSoup object or None if request fails
-
-get_countries(url)
-Main function to extract all countries data.
-
-Parameters:
-
-url (str): Target URL to scrape
-
-Returns:
-
-List of tuples containing country data
-
-📊 Sample Data
-
-Country	                Capital	                Population	Area (km²)
-Andorra         	Andorra la Vella	84,000	        468.0
-United Arab Emirates	Abu Dhabi	        4,975,593	82,880.0
-Afghanistan	        Kabul	                29,121,286	647,500.0
-Antigua and Barbuda	St. John's	        86,754	        443.0
-Albania	                Tirana	                2,986,952	28,748.0
-
-🛠️ Development
-
-Setting Up Development Environment
-Fork the repository
-
-Create a feature branch
-
 ```
+
+---
+
+## 🔧 Technical Details
+
+### Dependencies
+
+| Package        | Version | Purpose           |
+| -------------- | ------- | ----------------- |
+| beautifulsoup4 | ≥4.9.0  | HTML parsing      |
+| requests       | ≥2.25.0 | HTTP requests     |
+| pandas         | ≥1.3.0  | Data manipulation |
+| openpyxl       | ≥3.0.0  | Excel file export |
+
+---
+
+## 📑 Data Schema
+
+| Field      | Type    | Description      |
+| ---------- | ------- | ---------------- |
+| Country    | String  | Country name     |
+| Capital    | String  | Capital city     |
+| Population | Integer | Total population |
+| Area       | Float   | Land area (km²)  |
+
+---
+
+## 🧠 API Reference
+
+### **`get_details(country_one)`**
+
+Extracts the data for a single country.
+
+**Returns:**
+`(country_name, capital_name, population, area)`
+
+---
+
+### **`get_soup(url)`**
+
+Fetches and parses the webpage.
+**Returns:** BeautifulSoup object or `None` if request fails.
+
+---
+
+### **`get_countries(url)`**
+
+Main scraper function.
+**Returns:** List of tuples containing scraped country data.
+
+---
+
+## 📊 Sample Data
+
+| Country           | Capital          | Population | Area (km²) |
+| ----------------- | ---------------- | ---------- | ---------- |
+| Andorra           | Andorra la Vella | 84,000     | 468.0      |
+| UAE               | Abu Dhabi        | 4,975,593  | 82,880.0   |
+| Afghanistan       | Kabul            | 29,121,286 | 647,500.0  |
+| Antigua & Barbuda | St. John's       | 86,754     | 443.0      |
+| Albania           | Tirana           | 2,986,952  | 28,748.0   |
+
+---
+
+## 🛠️ Development
+
+### Setting up for contributing
+
+```bash
 git checkout -b feature/your-feature-name
 ```
 
-Make your changes
+Make your changes → Commit → Push → Open Pull Request.
 
-Run tests (if available)
+### Code Style
 
-Submit a pull request
+Follows **PEP 8** guidelines.
 
-Code Style
+---
 
-This project follows PEP 8 guidelines. Please ensure your code is properly formatted.
+## 🐛 Troubleshooting
 
-🤝 Contributing
+### ❌ `ModuleNotFoundError`
 
-We welcome contributions! Please see our Contributing Guide for details.
+Install required packages:
 
-Fork the Project
-
-Create your Feature Branch (git checkout -b feature/AmazingFeature)
-
-Commit your Changes (git commit -m 'Add some AmazingFeature')
-
-Push to the Branch (git push origin feature/AmazingFeature)
-
-Open a Pull Request
-
-🐛 Troubleshooting
-
-Common Issues
-
-Issue: ModuleNotFoundError
-
-# Solution: Install missing dependencies
-
-```
+```bash
 pip install beautifulsoup4 requests pandas openpyxl
 ```
 
-Issue: HTTP Connection Errors
+### ❌ HTTP connection error
 
-Check your internet connection
+* Check internet connection
+* Ensure URL is reachable
+* No firewall blocking requests
 
-Verify the target URL is accessible
+### ❌ Excel export fails
 
-Ensure no firewall is blocking requests
-
-Issue: Excel Export Fails
-
-# Solution: Install openpyxl explicitly
-
-```
+```bash
 pip install openpyxl
 ```
 
-Getting Help
+---
 
-📖 Check this README
+## ⚠️ Legal & Ethical Disclaimer
 
-🐛 Search existing GitHub Issues
+* This project is for **educational use only**
+* Always follow website **robots.txt**
+* Use proper **rate-limiting** in production
+* Scrapethissite.com is intentionally scraping-friendly
 
-💬 Create a new issue with detailed description
+---
 
-⚠️ Legal & Ethical Considerations
+## 📄 License
 
-This project is for educational purposes only
+This project is licensed under the MIT License.
+See the **LICENSE** file for details.
 
-Always respect website robots.txt and terms of service
+---
 
-The target website is specifically designed for web scraping practice
+## 🙏 Acknowledgments
 
-Implement proper rate limiting in production environments
+* Scrapethissite.com for practice data
+* BeautifulSoup4 team
+* Pandas developers
+* All contributors
 
-Be respectful of server resources
+---
 
-📄 License
+## 📞 Contact
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+**GitHub:** (https://github.com/deepsikha-lgtm)
 
-🙏 Acknowledgments
+**Project Link:** (https://github.com/deepsikha-lgtm/Web_Scraping.git)
 
-Scrapethissite.com for providing a safe scraping environment
+---
 
-Beautiful Soup team for excellent HTML parsing
+## 🚀 Future Enhancements
 
-Pandas team for powerful data processing
+* Add CLI interface
+* Multi-source scraping
+* Database integration
+* Web UI
+* API endpoints
+* Docker support
 
-Contributors and users of this project
+---
 
-📞 Contact
-
-GitHub: /deepsikha-lgtm
-
-Project Link: https://github.com/deepsikha-lgtm/Web_Scraping.git
-
-🚀 Future Enhancements
-
-Add command-line arguments
-
-Support for multiple data sources
-
-Database integration
-
-Web interface
-
-API endpoints
-
-Docker containerization
-
-```
 <div align="center">
 
-Built with ❤️ using Python
+Built with ❤️ using **Python** <br>
 
-https://img.shields.io/badge/Made%2520with-Python-1f425f.svg
+![Made with Python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)
 
-https://img.shields.io/badge/Powered%2520by-BeautifulSoup4-orange
+![Powered by BeautifulSoup4](https://img.shields.io/badge/Powered%20by-BeautifulSoup4-orange)
 
 </div>
-```
 
+---
 Additional Files for Your Project:
 
 1. requirements.txt
@@ -342,31 +305,24 @@ SOFTWARE.
 3. .gitignore
 
 # Virtual environment
-
 venv/
 env/
 .venv/
 
 # Python cache
 __pycache__/
-
 *.pyc
 *.pyo
 *.pyd
 
 # IDE
-
 .vscode/
 .idea/
 *.swp
 *.swo
 
 # Data files (optional - exclude if you want to track generated data)
-
 *.xlsx
 *.csv
 
-# OS
 
-.DS_Store
-Thumbs.db
